@@ -43,6 +43,7 @@ if($_POST) {
  	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
+	echo "$name";
 
    if (!$error) {
 
@@ -50,7 +51,7 @@ if($_POST) {
       $mail = mail($siteOwnersEmail, $subject, $message, $headers);
 
 		if ($mail) { echo "OK"; }
-      else { echo "Something went wrong. Please try again."; }
+    //   else { echo "Something went wrong. Please try again."; }
 		
 	} # end if - no validation error
 
